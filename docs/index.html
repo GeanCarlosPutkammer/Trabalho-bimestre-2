@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Web</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="style.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form action="#" method="post" id="meuFormulario">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" class="form-control" required>
+        </div>
+
+        
+        <div class="form-group">
+            <label>Gênero:</label><br>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="masculino" name="genero" value="Masculino" class="form-check-input" required onclick="mudarCorFundo('azul')">
+                <label class="form-check-label" for="masculino">Masculino</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="radio" id="feminino" name="genero" value="Feminino" class="form-check-input" required onclick="mudarCorFundo('rosa')">
+                <label class="form-check-label" for="feminino">Feminino</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input type="radio" id="outro" name="genero" value="Outro" class="form-check-input" required onclick="mudarCorFundo('branco')">
+                <label class="form-check-label" for="outro">Outro</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Interesses:</label><br>
+            <div class="form-check">
+                <input type="checkbox" id="esporte" name="interesses[]" value="Esporte" class="form-check-input">
+                <label class="form-check-label" for="esporte">Esporte</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" id="tecnologia" name="interesses[]" value="Tecnologia" class="form-check-input">
+                <label class="form-check-label" for="tecnologia">Tecnologia</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" id="Filmes/Series" name="interesses[]" value="Filmes/Series" class="form-check-input">
+                <label class="form-check-label" for="Filmes/Series">Filmes/Series</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" id="musica" name="interesses[]" value="Música" class="form-check-input">
+                <label class="form-check-label" for="musica">Música</label>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" id="arte" name="interesses[]" value="Arte" class="form-check-input">
+                <label class="form-check-label" for="arte">Arte</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="comentario">Comentário:</label>
+            <textarea id="comentario" name="comentario" rows="4" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</body>
+</html>
